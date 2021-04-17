@@ -1,0 +1,6 @@
+<figure class="figure picture">
+    <div class="picture-container">
+        <img src="/images/pics/{{ .Get 0 }}" class="figure-img" alt="Фигура {{ .Get 1 }}">
+    </div>
+    <figcaption class="figure-caption">{{ .Get 1 | .Page.RenderString }}</figcaption>
+</figure>

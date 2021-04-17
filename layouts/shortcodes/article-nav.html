@@ -1,0 +1,19 @@
+<ul class="pagination justify-content-between">
+    <!-- Previous article -->
+    <li class="page-item">
+        {{- with .Page.NextInSection -}}
+        <a href="{{ .Permalink }}" class="page-link" title="{{ .Title }}">
+            <i class="fas fa-angle-left mr-1"></i>Назад: {{ .Title }}
+        </a>
+        {{- end -}}
+    </li>
+
+    <!-- Next article -->
+    <li class="page-item">
+        {{- with .Page.PrevInSection -}}
+        <a href="{{ .Permalink }}" class="page-link bg-primary text-white" title="{{ .Title }}">
+            Далее: {{ .Title }}<i class="fas fa-angle-right ml-1"></i>
+        </a>
+        {{- end -}}
+    </li>
+</ul>

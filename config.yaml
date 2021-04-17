@@ -1,0 +1,11 @@
+baseURL: https://electrodynamics.info
+languageCode: ru
+title: "Электродинамика: взгляд физика"
+googleAnalytics: G-YBMK7NDJ5K
+author: К. Б. Канн
+
+markup:
+  goldmark:
+    renderer:
+      # Enable inline HTML
+      unsafe: true

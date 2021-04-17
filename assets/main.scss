@@ -1,0 +1,129 @@
+// Fonts
+$headings-font-weight: 700;
+
+// Base palette
+$primary:   #0e10a7; // TODO
+$secondary: #bcbdec; // TODO
+$info:      #447880; // TODO
+
+$body-bg:       #e6e4c4;
+$breadcrumb-bg: #fff;
+
+// Other overrides
+$jumbotron-bg: #f2f2f7;
+
+// Import Bootstrap
+@import "bootstrap-4.5.3/scss/bootstrap";
+
+// Import FontAwesome
+@import "fontawesome-5.15.2/fontawesome";
+@import "fontawesome-5.15.2/solid";
+@import "fontawesome-5.15.2/brands";
+
+// Scroll-to-top button
+#btn-scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    font-size: 2em;
+
+    &.show {
+        opacity: 0.9;
+        visibility: visible;
+    }
+}
+
+main {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border: #815300 2px solid;
+    border-radius: 12px;
+    box-shadow: 0 0 5px black;
+}
+.jumbotron {
+    border-radius: .6rem .6rem 0 0;
+    border-bottom: #81530030 1px solid;
+    margin: 0;
+}
+#sidebar {
+    background-color: #f2f2f7;
+
+    .nav-link {
+        border-radius: 0;
+        position: relative;
+        height: 40px;
+
+        &.active::after {
+            content: "";
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            bottom: 0;
+            right: -15px;
+            border-left: 15px solid $primary;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+        }
+    }
+}
+
+.author {
+    float: left;
+    max-width: 40%;
+    height: auto;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.footnote-ref {
+    &:before {
+        content: '[';
+    }
+    &:after {
+        content: ']';
+    }
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 3rem;
+}
+
+blockquote {
+    background-color: #f2f2f7;
+    border-left: $secondary 2px solid;
+    padding: 1rem;
+    font-style: italic;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+.formula {
+    display: flex;
+
+    .figure-container {
+        flex-grow: 1;
+        text-align: center;
+    }
+    figcaption {
+        flex-grow: 0;
+    }
+}
+.picture {
+    display: block;
+
+    .picture-container {
+        text-align: center;
+    }
+    figcaption {
+        text-align: center;
+    }
+}

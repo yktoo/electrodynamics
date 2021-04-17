@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+<head>
+    {{- partial "head-meta.html" . }}
+    {{- block "schema-dot-org" . }}{{ end }}
+
+    <!-- Link to self -->
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- Favicon   -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ `favicon.ico` | absURL }}"/>
+
+    <!-- Page title -->
+    {{- block "title" . }}
+    <title>{{ with .Title }}{{ . | markdownify | plainify | safeHTML }} | {{ end }}{{ .Site.Title }}</title>
+    {{- end }}
+
+    <!-- Stylesheets -->
+    {{- partial "stylesheets.html" . }}
+
+    <!-- Google Analytics (do not add the code when running locally) -->
+    {{- if not (in (print $.Site.BaseURL) "localhost") }}
+    {{- partial "google-analytics.html" . }}
+    {{- end }}
+</head>
+<body>
+
+<!-- Scroll to top button -->
+<a href id="btn-scroll-to-top" class="fas fa-angle-up btn btn-secondary"></a>
+
+<main id="page" class="container">
+    <div class="row">
+        <div class="col-12 px-0">
+            <!-- Overall header -->
+            {{ block "header" . }}
+            <!-- Jumbotron -->
+            <div class="jumbotron text-center">
+                <div class="display-4">Электродинамика</div>
+                <div class="lead">Взгляд физика</div>
+            </div>
+            {{ end }}
+        </div>
+
+        <!-- Sidebar navigation -->
+        <div class="d-none d-md-block col-md-4 col-lg-3 px-0">
+            {{- partial "sidebar" . }}
+        </div>
+
+        <!-- Main page content -->
+        <div class="col-12 col-md-8 col-lg-9 pl-4 pr-5 pb-4">
+            <!-- Breadcrumbs -->
+            {{- partial "breadcrumbs" . }}
+
+            <!-- Second-level Navbar -->
+            {{- block "secondary-navbar" . }}{{ end }}
+
+            <!-- Heading -->
+            {{- block "heading" . }}
+            {{- if default true .Params.showHeading }}
+                <h1 class="mt-3">{{ .Title | markdownify }}</h1>
+                {{- with .Params.description }}<p class="subtitle">{{ . | markdownify }}</p>{{ end -}}
+            {{ end }}
+            {{- end }}
+
+            <!-- Main content -->
+            {{- block "main" . }}
+            {{- .Content }}
+            {{- end }}
+
+            <!-- Bottom Navbar -->
+            {{- block "bottom-navbar" . }}{{ end }}
+        </div>
+    </div>
+</main>
+
+{{ partial "footer" . }}
+{{ partial "scripts" . }}
+</body>
+</html>
