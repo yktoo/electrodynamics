@@ -49,9 +49,23 @@ main {
     border-radius: .6rem .6rem 0 0;
     border-bottom: #81530030 1px solid;
     margin: 0;
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 3rem;
+        }
+        @include media-breakpoint-up(md) {
+            font-size: 3.5rem;
+        }
+    }
 }
 #sidebar {
     background-color: #f2f2f7;
+    border-bottom-left-radius: .6rem;
 
     .nav-link {
         border-radius: 0;
@@ -72,7 +86,11 @@ main {
     }
 }
 
-.author {
+footer {
+    font-size: 0.85rem;
+}
+
+.thumb-left {
     float: left;
     max-width: 40%;
     height: auto;
@@ -125,5 +143,12 @@ blockquote {
     }
     figcaption {
         text-align: center;
+    }
+}
+.dot-sep {
+    &:not(:last-child):after {
+        content: "·";
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
     }
 }

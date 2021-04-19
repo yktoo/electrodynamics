@@ -1,5 +1,5 @@
-<footer>
-    <div class="container text-center py-3">
-        Авторское право ©2009-2011 К. Б. Канн и наследники. <a href="TODO">Условия использования</a>.
-    </div>
+<footer class="container text-center py-3">
+    <span class="dot-sep">Авторское право ©2009-{{ now.Year }} К. Б. Канн и наследники</span>
+    <span class="dot-sep">Создано в <a href="https://yktoo.solutions/" target="_blank" rel="nofollow noopener noreferrer">Yktoo Solutions</a></span>
+    <span class="dot-sep"><a href="{{ ref . `license` }}">Условия использования</a></span>
 </footer>

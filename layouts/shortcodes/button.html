@@ -1,0 +1,10 @@
+<!-- Big primary button link shortcode. Parameters:
+    0 - link title
+    1 - link URL
+    2 - optional icon classes
+-->
+<p>
+    <a href="{{ .Get 1 }}" class="btn btn-primary btn-lg">
+        {{- with .Get 2 }}<i class="{{ . }} mr-1"></i>{{ end }}{{ .Get 0 -}}
+    </a>
+</p>
