@@ -166,18 +166,18 @@ main {
     width: 100%;
     flex: 0 0 100%;
     max-width: 100%;
-    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    padding: 1rem;
 
     @include media-breakpoint-up(md) {
         display: block;
         flex: 0 0 66.66666666%;
         max-width: 66.66666666%;
+        padding: 1.5rem 3rem 1.5rem 1.5rem;
     }
     @include media-breakpoint-up(lg) {
         flex: 0 0 75%;
         max-width: 75%;
     }
-
 }
 
 footer {
