@@ -4,7 +4,7 @@
     2 - optional icon classes
 -->
 <p>
-    <a href="{{ .Get 1 }}" class="btn btn-primary btn-lg">
+    <a href="{{ .Get 1 }}" class="btn btn-primary">
         {{- with .Get 2 }}<i class="{{ . }} mr-1"></i>{{ end }}{{ .Get 0 -}}
     </a>
 </p>

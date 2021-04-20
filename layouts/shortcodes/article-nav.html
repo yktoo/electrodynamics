@@ -1,8 +1,8 @@
-<ul class="pagination justify-content-between">
+<ul class="pagination justify-content-between my-3">
     <!-- Previous article -->
     <li class="page-item">
         {{- with .Page.NextInSection -}}
-        <a href="{{ .Permalink }}" class="page-link" title="{{ .Title }}">
+        <a href="{{ .Permalink }}" class="page-link" title="{{ .Title }}" rel="prev">
             <i class="fas fa-angle-left mr-1"></i>Назад: {{ .Title }}
         </a>
         {{- end -}}
@@ -11,7 +11,7 @@
     <!-- Next article -->
     <li class="page-item">
         {{- with .Page.PrevInSection -}}
-        <a href="{{ .Permalink }}" class="page-link bg-primary text-white" title="{{ .Title }}">
+        <a href="{{ .Permalink }}" class="page-link bg-primary text-white" title="{{ .Title }}" rel="next">
             Далее: {{ .Title }}<i class="fas fa-angle-right ml-1"></i>
         </a>
         {{- end -}}

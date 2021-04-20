@@ -9,3 +9,7 @@ markup:
     renderer:
       # Enable inline HTML
       unsafe: true
+
+disableKinds:
+  - taxonomy
+  - term

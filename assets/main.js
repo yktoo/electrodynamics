@@ -12,9 +12,12 @@ $(document).ready(function () {
         }
     });
 
-    btnScrollToTop.on('click', function(e) {
+    btnScrollToTop.on('click', e => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Set up the sidebar toggler
+    $('#sidebar-toggler').on('click', () => $('#sidebar').toggleClass('collapsed'));
 
 });

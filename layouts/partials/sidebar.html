@@ -1,4 +1,4 @@
-<ul class="nav nav-pills flex-column" id="sidebar">
+<ul class="nav nav-pills flex-column">
     {{- range .Site.Menus.sidebar }}
     <li class="nav-item">
         <a class="nav-link{{ if $.IsMenuCurrent `sidebar` . }} active{{ end }}" href="{{ .URL }}">

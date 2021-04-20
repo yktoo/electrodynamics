@@ -28,37 +28,38 @@
 <!-- Scroll to top button -->
 <a href id="btn-scroll-to-top" class="fas fa-angle-up btn btn-secondary"></a>
 
-<main id="page" class="container">
+<main id="page" class="container-md">
     <div class="row">
         <div class="col-12 px-0">
             <!-- Overall header -->
             {{ block "header" . }}
             <!-- Jumbotron -->
             <div class="jumbotron text-center">
-                <h1>Электродинамика</h1>
-                <div class="lead">Взгляд физика</div>
+                <h1>Электродинамика:</h1>
+                <h2>взгляд физика</h2>
+                <div>Мемориальный сайт <b><a href="{{ ref . `/about` }}">К. Б. Канна</a></b> (23.04.1936 — 28.12.2020)</div>
             </div>
             {{ end }}
         </div>
 
         <!-- Sidebar navigation -->
-        <div class="d-none d-md-block col-md-4 col-lg-3 px-0">
+        <a href="#sidebar" id="sidebar-toggler" class="fas fa-bars btn btn-primary" aria-controls="sidebar"></a>
+        <div id="sidebar" class="collapsed">
             {{- partial "sidebar" . }}
         </div>
 
         <!-- Main page content -->
-        <div class="col-12 col-md-8 col-lg-9 pl-4 pr-5 pb-4">
-            <!-- Breadcrumbs -->
-            {{- partial "breadcrumbs" . }}
-
-            <!-- Second-level Navbar -->
-            {{- block "secondary-navbar" . }}{{ end }}
-
+        <div id="content">
             <!-- Heading -->
             {{- block "heading" . }}
             {{- if default true .Params.showHeading }}
-                <h1 class="mt-3">{{ .Title | markdownify }}</h1>
-                {{- with .Params.description }}<p class="subtitle">{{ . | markdownify }}</p>{{ end -}}
+                <h1>{{ .Title | markdownify }}</h1>
+                {{- with .Params.description -}}
+                    <p class="subtitle">
+                        <span class="font-weight-bold">Кратко:</span><br>
+                        {{- . | markdownify -}}
+                    </p>
+                {{- end -}}
             {{ end }}
             {{- end }}
 
