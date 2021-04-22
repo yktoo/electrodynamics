@@ -2,8 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="theme-color" content="#199450">
 <meta name="description" content="{{ .Params.description | default .Site.Params.description }}">
+<meta name="keywords" content="{{ delimit .Site.Params.keywords `,` }}">
 {{ with .Params.tags }}<meta name="keywords" content="{{ delimit (sort .) `,` }}">{{ end }}
-<!-- Fix for images used in og: and twitter: that understands page resources  -->
 {{- partial "opengraph" . }}
 {{- partial "twitter-cards" . }}
 {{- .Site.Hugo.Generator }}
