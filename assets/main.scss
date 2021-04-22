@@ -191,6 +191,7 @@ footer {
     font-size: 0.85rem;
 }
 
+// Headings
 h1 {
     font-size: 2rem;
 
@@ -200,6 +201,16 @@ h1 {
     @include media-breakpoint-up(md) {
         font-size: 2.5rem;
     }
+
+    :not(:first-child) {
+        margin-top: 4rem;
+    }
+}
+h2:not(:first-child) {
+    margin-top: 3.5rem;
+}
+h3:not(:first-child) {
+    margin-top: 3rem;
 }
 
 .thumb-left {

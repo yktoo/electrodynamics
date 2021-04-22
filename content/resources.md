@@ -46,3 +46,15 @@ EAN
 Книгу **«Электродинамика здравого смысла»** вы можете приобрести в издательстве по кнопке ниже:
 
 {{< button "Купить книгу «Электродинамика здравого смысла»" "https://www.lap-publishing.com/catalog/details/store/gb/book/978-3-659-19570-9/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%B4%D0%B8%D0%BD%D0%B0%D0%BC%D0%B8%D0%BA%D0%B0-%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BE%D0%B3%D0%BE-%D1%81%D0%BC%D1%8B%D1%81%D0%BB%D0%B0" "fas fa-book" >}}
+
+## Исходный код веб-сайта
+
+Данный сайт создан [Дмитрием Канном](https://yktoo.com) и [Yktoo Solutions](https://yktoo.solutions) с помощью [Hugo](https://gohugo.io), [Bootstrap](https://getbootstrap.com) и [Font Awesome](https://fontawesome.com).
+
+Исходный код и все сопутствующие материалы распространяются на условиях [той же лицензии](/license), что и контент на этом сайте.
+
+{{< button "Исходный код на GitHub" "https://github.com/yktoo/electrodynamics" "fab fa-github" >}}
+
+## См. также
+
+* [Условия использования](/license)
