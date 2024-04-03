@@ -1,8 +1,8 @@
 baseURL: https://electrodynamics.info
-languageCode: ru
+languageCode: ru-ru
+defaultContentLanguage: ru
 title: "Электродинамика: взгляд физика"
 googleAnalytics: G-YBMK7NDJ5K
-author: К. Б. Канн
 
 markup:
   goldmark:
@@ -15,6 +15,7 @@ disableKinds:
   - term
 
 params:
+  author: К. Б. Канн
   description: >
     Виртуальный мемориал доктора технических наук, профессора Константина Борисовича Канна (23.04.1936 — 28.12.2020).
     Изложение его видения современного состояния электродинамики, а также несостыковок и проблем, требующих дальнейших исследований и объяснений.
