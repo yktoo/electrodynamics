@@ -2,7 +2,7 @@
     {{- range .Site.Menus.sidebar }}
     <li class="nav-item">
         <a class="nav-link{{ if $.IsMenuCurrent `sidebar` . }} active{{ end }}" href="{{ .URL }}">
-            {{- with .Page.Params.icon }}<i class="fas fa-{{ . }} mr-1"></i>{{ end -}}
+            {{- with .Page.Params.icon }}<i class="fas fa-{{ . }} me-1"></i>{{ end -}}
             {{- .Title -}}
         </a>
     </li>

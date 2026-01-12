@@ -9,16 +9,11 @@ $info:      #447880; // TODO
 $body-bg:       #e6e4c4;
 $breadcrumb-bg: #fff;
 
-// Other overrides
-$jumbotron-bg: #f2f2f7;
-
-// Import Bootstrap
-@import "bootstrap-4.5.3/scss/bootstrap";
-
-// Import FontAwesome
-@import "fontawesome-5.15.2/fontawesome";
-@import "fontawesome-5.15.2/solid";
-@import "fontawesome-5.15.2/brands";
+// Import dependencies
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "node_modules/@fortawesome/fontawesome-free/scss/brands";
 
 // Scroll-to-top button
 #btn-scroll-to-top {
@@ -48,11 +43,13 @@ main {
         box-shadow: 0 0 7px #33333370;
     }
 }
+
 .jumbotron {
     border-radius: .6rem .6rem 0 0;
     border-bottom: #81530030 1px solid;
     margin: 0;
-    background: url("/images/header.jpg") center;
+    padding: 2rem;
+    background: url("/images/header.jpg") center #f2f2f7;
 
     h1 {
         font-size: 2rem;

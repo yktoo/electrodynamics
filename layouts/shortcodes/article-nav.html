@@ -3,7 +3,7 @@
     <li class="page-item">
         {{- with .Page.NextInSection -}}
         <a href="{{ .Permalink }}" class="page-link" title="{{ .Title }}" rel="prev">
-            <i class="fas fa-angle-left mr-1"></i>Назад: {{ .Title }}
+            <i class="fas fa-angle-left me-1"></i>Назад: {{ .Title }}
         </a>
         {{- end -}}
     </li>
@@ -12,7 +12,7 @@
     <li class="page-item">
         {{- with .Page.PrevInSection -}}
         <a href="{{ .Permalink }}" class="page-link bg-primary text-white" title="{{ .Title }}" rel="next">
-            Далее: {{ .Title }}<i class="fas fa-angle-right ml-1"></i>
+            Далее: {{ .Title }}<i class="fas fa-angle-right ms-1"></i>
         </a>
         {{- end -}}
     </li>

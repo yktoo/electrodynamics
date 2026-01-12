@@ -1,5 +1,5 @@
-{{- $jquery    := resources.Get "jquery-3.5.1/jquery-3.5.1.slim.js" -}}
-{{- $popper    := resources.Get "popper-1.16.1/popper.js" -}}
-{{- $bootstrap := resources.Get "bootstrap-4.5.3/js/bootstrap.bundle.js" -}}
-{{- $main      := resources.Get "main.js" -}}
-<script src="{{ (slice $jquery $popper $bootstrap $main | resources.Concat `js/bundle.js` | minify).Permalink }}"></script>
+{{- $js := slice       (resources.Get "node_modules/jquery/dist/jquery.js") -}}
+{{- $js = $js | append (resources.Get "node_modules/@popperjs/core/dist/umd/popper.js") -}}
+{{- $js = $js | append (resources.Get "node_modules/bootstrap/dist/js/bootstrap.js") -}}
+{{- $js = $js | append (resources.Get "main.js") -}}
+<script src="{{ ($js | resources.Concat `js/bundle.js` | minify).Permalink }}"></script>

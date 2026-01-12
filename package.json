@@ -1,0 +1,27 @@
+{
+    "name": "electrodynamics.yktoo.com",
+    "version": "1.0.0",
+    "description": "Source code of electrodynamics.yktoo.com",
+    "main": "index.js",
+    "scripts": {
+        "build": "yarn run clean && hugo --gc --minify --environment=development",
+        "build:prod": "yarn run clean && hugo --gc --minify",
+        "clean": "rm -rf public",
+        "start": "hugo server -DFO"
+    },
+    "author": "Dmitry Kann",
+    "repository": "https://github.com/yktoo/yktoo.com",
+    "license": "CC-BY-NC-SA-4.0",
+    "comments": {
+        "dependencies": {},
+        "devDependencies": {}
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-free": "^6.7.2",
+        "@popperjs/core": "^2.11.8",
+        "bootstrap": "^5.3.3",
+        "cookieconsent": "^3.1.1",
+        "jquery": "^3.7.1"
+    },
+    "packageManager": "yarn@4.10.3"
+}

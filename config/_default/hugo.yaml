@@ -2,7 +2,6 @@ baseURL: https://electrodynamics.yktoo.com
 languageCode: ru-ru
 defaultContentLanguage: ru
 title: "Электродинамика: взгляд физика"
-googleAnalytics: G-YBMK7NDJ5K
 
 markup:
   goldmark:
@@ -13,6 +12,24 @@ markup:
 disableKinds:
   - taxonomy
   - term
+
+services:
+  googleAnalytics:
+    id: 'G-YBMK7NDJ5K'
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.150.0"
+  mounts:
+    - source: node_modules
+      target: assets/node_modules
+    - source: assets
+      target: assets
+    - source: node_modules/@fortawesome/fontawesome-free/webfonts
+      target: static/webfonts
+    - source: static
+      target: static
 
 params:
   author: К. Б. Канн
@@ -51,3 +68,6 @@ params:
     - электромагнитная индукция
     - электромагнитные волны
     - электроэнергия
+  comentario:
+    scriptUrl: https://comentario.app/comentario.js
+    siteId: 87d7f33f-3065-4c7d-a02f-e0a25373b389

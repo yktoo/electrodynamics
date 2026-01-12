@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Lang }}">
 <head>
-    {{- partial "head-meta.html" . }}
+    {{- partial "head-meta" . }}
     {{- block "schema-dot-org" . }}{{ end }}
 
     <!-- Link to self -->
@@ -16,12 +16,11 @@
     {{- end }}
 
     <!-- Stylesheets -->
-    {{- partial "stylesheets.html" . }}
+    {{- partial "stylesheets" . }}
 
-    <!-- Google Analytics (do not add the code when running locally) -->
-    {{- if not (in (print $.Site.BaseURL) "localhost") }}
-    {{- partial "google-analytics.html" . }}
-    {{- end }}
+
+    <!-- Google Analytics -->
+    {{- partial "google-analytics" . }}
 </head>
 <body>
 
